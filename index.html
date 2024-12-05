@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowboarding Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+<nav>
+    <ul style="display: flex; justify-content: flex-start; gap: 1rem; list-style: none; padding: 0; background-color: #f8f9fa; margin: 0; border-bottom: 1px solid #ddd;">
+        <li><a href="#about">Why I Love Snowboarding</a></li>
+        <li><a href="#shaun-white">Shaun White in Action</a></li>
+        <li><a href="#tableau">Snowboarding Insights</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="riddle_generator.html">Riddle Generator</a></li>
+    </ul>
+</nav>
+
+    <main>
+        
+<section id="about">
+    <h2>Why I Love Snowboarding</h2>
+    <p>Snowboarding is my passion. I love the thrill of jumping off ramps, gliding effortlessly through fresh powder, and challenging myself in the park. It's not just a sport—it's a lifestyle that connects me to nature, pushes my limits, and brings pure joy with every run.</p>
+</section>
+
+<section id="shaun-white">
+    <h2>Shaun White in Action</h2>
+    <img src="shaun_white_image.jpg" alt="Shaun White Snowboarding" style="width: 100%; max-width: 600px;">
+    <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/8Ll3j7naT9k" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section id="tableau">
+    <h2>Snowboarding Insights</h2>
+    <canvas id="snowfallChart" width="800" height="400"></canvas>
+</section>
+
+    </main>
+    <script>
+        const ctx = document.getElementById('snowfallChart').getContext('2d');
+        const snowfallChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Telluride', 'Jackson Hole', 'Steamboat', 'Mammoth', 'Snowbird'],
+                datasets: [{
+                    label: 'Average Snowfall (in inches)',
+                    data: [300, 350, 400, 450, 500],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

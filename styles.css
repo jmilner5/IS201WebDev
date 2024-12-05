@@ -1,0 +1,9 @@
+
+body {
+    background-image: url('./Snow_fall.avif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff; /* Fallback color */
+}
